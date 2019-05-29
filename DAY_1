@@ -1,0 +1,29 @@
+// contructor function
+function Person(name, address, age) {
+    this.name = name;
+    this.address = address;
+    this.age = age;
+    // this.canVote = function() {
+    //     if (this.age >= 18) {
+    //         console.log('yes.. can vote :)');
+    //     } else {
+    //         console.log('no.. can NOT vote :(');
+    //     }
+    // };
+}
+
+Person.prototype.canVote = function() {
+    if (this.age >= 18) {
+        console.log('yes.. can vote :)');
+    } else {
+        console.log('no.. can NOT vote :(');
+    }
+};
+
+const p1 = new Person('p1', 'Pune', 45);
+console.log(p1);
+p1.canVote();
+
+const p2 = new Person('p2', 'Karad', 15);
+console.log(p2);
+p2.canVote();
